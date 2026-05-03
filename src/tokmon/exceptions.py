@@ -1,7 +1,9 @@
 """Custom exceptions for tokmon."""
 
+from __future__ import annotations
 
-class BudgetExceeded(RuntimeError):
+
+class BudgetExceededError(RuntimeError):
     """Raised when a tracked function exceeds its token/cost budget."""
 
     def __init__(self, feature: str, actual: float, limit: float, unit: str = "USD") -> None:

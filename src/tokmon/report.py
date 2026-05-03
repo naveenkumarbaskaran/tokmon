@@ -12,11 +12,12 @@ def last_report() -> str:
         return "No tracked sessions yet."
 
     last = sessions[-1]
+    cost_str = f"${last['cost_usd']:.4f}"
     lines = [
         f"┌{'─' * 50}┐",
         f"│ {last['feature']:<48} │",
         f"│ Calls: {last['calls']} | Tokens: {last['total_tokens']:,} | "
-        f"Cost: ${last['cost_usd']:.4f}{' ' * max(0, 20 - len(f'${last[\"cost_usd\"]:.4f}'))}│",
+        f"Cost: {cost_str}{' ' * max(0, 20 - len(cost_str))}│",
         f"└{'─' * 50}┘",
     ]
     return "\n".join(lines)
@@ -41,7 +42,6 @@ def print_report() -> None:
 
     # Print table
     header = f"{'Feature':<20} {'Calls':>6} {'Tokens':>10} {'Cost':>10}"
-    separator = f"{'─' * 20} {'─' * 6} {'─' * 10} {'─' * 10}"
 
     print(f"┌{'─' * 52}┐")
     print(f"│ {header} │")

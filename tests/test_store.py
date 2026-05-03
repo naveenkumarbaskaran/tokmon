@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-from tokmon.store import Store, export_json, export_csv, _global_store
+from tokmon.store import Store, _global_store, export_csv, export_json
 from tokmon.tracker import TokenMonitor
 
 

@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 import time
-from typing import Any
 from functools import wraps
+from typing import Any
 
 from tokmon.tracker import _monitor
-
 
 _patched = False
 

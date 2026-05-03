@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-import json
 import csv
 import io
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from tokmon.tracker import SessionReport

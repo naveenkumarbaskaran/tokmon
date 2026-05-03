@@ -1,8 +1,6 @@
 """Tests for tokmon tracker."""
 
-import pytest
-from tokmon.tracker import TokenMonitor, track, budget, session
-from tokmon.exceptions import BudgetExceeded
+from tokmon.tracker import TokenMonitor, budget, session, track
 
 
 def test_monitor_session_lifecycle():

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from tokmon.tracker import _monitor, CallRecord
+from tokmon.tracker import CallRecord, _monitor
 
 
 def record(

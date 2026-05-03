@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import functools
 import time
+from collections.abc import Callable, Generator
 from contextlib import contextmanager
 from dataclasses import dataclass, field
-from typing import Any, Callable, Generator
+from typing import Any
 
-from tokmon.exceptions import BudgetExceeded
+from tokmon.exceptions import BudgetExceededError
 from tokmon.pricing import calculate_cost
 from tokmon.store import _global_store
 
@@ -189,11 +190,11 @@ def budget(
             # Check budget after execution
             if max_usd is not None and session.total_cost_usd > max_usd:
                 if hard:
-                    raise BudgetExceeded(feature, session.total_cost_usd, max_usd, "USD")
+                    raise BudgetExceededError(feature, session.total_cost_usd, max_usd, "USD")
 
             if max_tokens is not None and session.total_tokens > max_tokens:
                 if hard:
-                    raise BudgetExceeded(
+                    raise BudgetExceededError(
                         feature, float(session.total_tokens), float(max_tokens), "tokens"
                     )
 
