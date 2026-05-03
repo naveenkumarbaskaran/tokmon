@@ -41,11 +41,17 @@ def get_pricing(model: str) -> dict[str, float]:
     if model in MODEL_PRICING:
         return MODEL_PRICING[model]
 
-    # Fuzzy: check if model name contains a known key
+    # Fuzzy: find the longest matching key (most specific wins)
     model_lower = model.lower()
-    for key, pricing in MODEL_PRICING.items():
-        if key in model_lower:
-            return pricing
+    best_key: str | None = None
+    best_len = 0
+    for key in MODEL_PRICING:
+        if key != "_default" and key in model_lower and len(key) > best_len:
+            best_key = key
+            best_len = len(key)
+
+    if best_key is not None:
+        return MODEL_PRICING[best_key]
 
     return MODEL_PRICING["_default"]
 
