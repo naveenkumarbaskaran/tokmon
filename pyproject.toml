@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "tokmon"
+name = "tokmon-ai"
 version = "0.1.0"
 description = "Lightweight LLM token & cost tracker — drop-in decorator, live dashboards, budget alerts."
 readme = "README.md"
