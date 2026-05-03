@@ -186,16 +186,6 @@ Core `tokmon` has **zero dependencies**. Optional extras:
 - `tokmon[litellm]` — auto-patches LiteLLM
 - `tokmon[all]` — everything
 
-## Contributing
-
-```bash
-git clone https://github.com/naveenkumarbaskaran/tokmon.git
-cd tokmon
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-pytest
-```
-
 ## License
 
 MIT
