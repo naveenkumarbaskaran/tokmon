@@ -11,6 +11,16 @@
 pip install tokmon
 ```
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="tokmon demo — track LLM token costs per request" width="700">
+  <br>
+  <em>Tracking token usage and costs across an agent pipeline — decorator, budget alerts, session dashboard</em>
+</p>
+
+---
+
 ## The Problem
 
 You're building AI agents and you have **no idea** what they cost per request. Is it $0.01 or $0.50? Which tool call is the expensive one? You'll find out at the end of the month when the invoice arrives.
