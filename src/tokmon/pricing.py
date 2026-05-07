@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-# Pricing per 1M tokens (USD)
+# Pricing per 1M tokens (USD) — updated May 2025
 MODEL_PRICING: dict[str, dict[str, float]] = {
     # OpenAI
     "gpt-4o": {"prompt": 2.50, "completion": 10.00},
@@ -13,6 +13,11 @@ MODEL_PRICING: dict[str, dict[str, float]] = {
     "o1": {"prompt": 15.00, "completion": 60.00},
     "o1-mini": {"prompt": 3.00, "completion": 12.00},
     "o3-mini": {"prompt": 1.10, "completion": 4.40},
+    "o3": {"prompt": 10.00, "completion": 40.00},
+    "o4-mini": {"prompt": 1.10, "completion": 4.40},
+    "gpt-4.1": {"prompt": 2.00, "completion": 8.00},
+    "gpt-4.1-mini": {"prompt": 0.40, "completion": 1.60},
+    "gpt-4.1-nano": {"prompt": 0.10, "completion": 0.40},
     # Anthropic
     "claude-opus-4": {"prompt": 15.00, "completion": 75.00},
     "claude-sonnet-4": {"prompt": 3.00, "completion": 15.00},
@@ -21,15 +26,23 @@ MODEL_PRICING: dict[str, dict[str, float]] = {
     "claude-3-haiku": {"prompt": 0.25, "completion": 1.25},
     "claude-3-opus": {"prompt": 15.00, "completion": 75.00},
     # Google
+    "gemini-2.5-pro": {"prompt": 1.25, "completion": 10.00},
+    "gemini-2.5-flash": {"prompt": 0.15, "completion": 0.60},
+    "gemini-2.0-flash": {"prompt": 0.10, "completion": 0.40},
     "gemini-1.5-pro": {"prompt": 1.25, "completion": 5.00},
     "gemini-1.5-flash": {"prompt": 0.075, "completion": 0.30},
-    "gemini-2.0-flash": {"prompt": 0.10, "completion": 0.40},
     # Meta (via API providers)
+    "llama-4-maverick": {"prompt": 0.20, "completion": 0.60},
+    "llama-4-scout": {"prompt": 0.15, "completion": 0.40},
+    "llama-3.3-70b": {"prompt": 0.30, "completion": 0.35},
     "llama-3.1-70b": {"prompt": 0.35, "completion": 0.40},
     "llama-3.1-8b": {"prompt": 0.05, "completion": 0.08},
     # Mistral
     "mistral-large": {"prompt": 2.00, "completion": 6.00},
     "mistral-small": {"prompt": 0.20, "completion": 0.60},
+    # DeepSeek
+    "deepseek-v3": {"prompt": 0.27, "completion": 1.10},
+    "deepseek-r1": {"prompt": 0.55, "completion": 2.19},
     # Default fallback
     "_default": {"prompt": 1.00, "completion": 3.00},
 }

@@ -1,14 +1,14 @@
 # tokmon
 
-[![PyPI version](https://img.shields.io/pypi/v/tokmon.svg)](https://pypi.org/project/tokmon/)
-[![Python](https://img.shields.io/pypi/pyversions/tokmon.svg)](https://pypi.org/project/tokmon/)
+[![PyPI version](https://img.shields.io/pypi/v/tokmon-ai.svg)](https://pypi.org/project/tokmon-ai/)
+[![Python](https://img.shields.io/pypi/pyversions/tokmon-ai.svg)](https://pypi.org/project/tokmon-ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://github.com/naveenkumarbaskaran/tokmon/actions/workflows/ci.yml/badge.svg)](https://github.com/naveenkumarbaskaran/tokmon/actions)
 
-**Know exactly what your LLM calls cost.** One decorator. Zero config.
+**Know exactly what your LLM calls cost.** One decorator. Zero config. Zero dependencies.
 
 ```
-pip install tokmon
+pip install tokmon-ai
 ```
 
 ## 🎬 Demo

@@ -11,7 +11,7 @@ from tokmon.tracker import TokenMonitor, budget, session, track
 # Backward compatibility alias
 BudgetExceeded = BudgetExceededError
 
-__version__ = "0.1.0"
+__version__ = "2.0.0"
 __all__ = [
     "track",
     "budget",
